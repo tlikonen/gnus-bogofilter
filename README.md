@@ -38,7 +38,7 @@ Gnus has its own full-featured spam-filtering framework. I have used it
 many years but, in my opinion, it's over-designed and complicated. It
 practically requires Gnus registry too which adds to the complexity. For
 basic Bogofilter-based mail-filtering a simpler approach may suit
-better.
+better. Thus, this package.
 
 
 Copyright and License
