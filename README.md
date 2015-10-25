@@ -1,8 +1,8 @@
 Gnus Bogofilter
 ===============
 
-**[Bogofilter][] mail filter features for [Gnus][], [Emacs's][Emacs]
-mail and news client**
+**[Bogofilter][] mail filter features for [Gnus][] ([Emacs's][Emacs]
+mail and news client)**
 
 [Bogofilter]: http://bogofilter.sourceforge.net/
 [Gnus]: http://www.gnus.org/
