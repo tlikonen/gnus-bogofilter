@@ -19,8 +19,8 @@ must be installed separately. It should be available in all common
 GNU/Linux distributions.
 
 This package adds a Bogofilter mail-splitting function
-`bogofilter-spam-split` which can be used with Gnus's
-`nnmail-split-fancy` or `nnimap-split-fancy`.
+`bogofilter-split` which can be used with Gnus's `nnmail-split-fancy` or
+`nnimap-split-fancy`.
 
 There are also interactive commands for Gnus's summary buffer. Commands
 `bogofilter-register-ham` and `bogofilter-register-spam` can be used to

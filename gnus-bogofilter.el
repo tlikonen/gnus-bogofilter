@@ -119,25 +119,35 @@ non-nil) also show the same information in echo area."
 
 
 ;;;###autoload
-(defun bogofilter-spam-split (split)
-  "Bogofilter spam-split function for Gnus.
+(defun bogofilter-split (spam-split &optional unsure-split ham-split)
+  "Bogofilter split function for Gnus.
 
 Usage in `nnmail-split-fancy' or `nnimap-split-fancy':
 
-    (: bogofilter-spam-split SPLIT)
+    (: bogofilter-split SPAM-SPLIT UNSURE-SPLIT HAM-SPLIT)
 
-If mail is detected as spam return the SPLIT argument, otherwise
-return nil. This function does not use the SPLIT argument in any
-way; it just returns it. In practice SPLIT must evaluate to a
-valid split form as described in `nnmail-split-fancy'. Simple
-spam group name is probably common:
+Only the SPAM-SPLIT argument is mandatory. If mail is detected as
+spam return the SPAM-SPLIT argument. If mail's spam status is
+unknown return the UNSURE-SPLIT argument. If mail is detected as
+ham return the HAM-SPLIT argument. If there's a Bogofilter error
+return nil.
 
-    (: bogofilter-spam-split \"spam\")
+This function does not use any of its arguments; it just returns
+them. In practice, all arguments must be valid split forms as
+described in `nnmail-split-fancy'. Simple spam group name is
+probably common:
 
-But anything is possible, for example:
+    (: bogofilter-split \"spam\")
 
-    (: bogofilter-spam-split '(| (from \"paypal\" \"paypal-spam\")
-                                 \"other-spam\"))
+That example means that detected spam mail is delivered to group
+\"spam\". Otherwise return nil and mail's processing will
+continue to the next split form of `nnmail-split-fancy'. More
+complex example:
+
+    (: bogofilter-split '(| (from \"paypal\" \"paypal-spam\")
+                          \"other-spam\")
+                        \"unsure\"
+                        \"good-mail\")
 
 This function runs `bogofilter-program' with \"-u\" argument
 which automatically trains the Bogofilter database with the
@@ -151,17 +161,17 @@ the database is not trained."
       (let ((message (current-buffer)))
         (with-temp-buffer
           (insert-buffer-substring message)
-          (let ((name "bogofilter-spam-split")
+          (let ((name "bogofilter-split")
                 (status (bogofilter--process-buffer "-u")))
             (cond ((= status 0)
                    (message "%s: message is spam." name)
-                   split)
+                   spam-split)
                   ((= status 1)
                    (message "%s: message is ham." name)
-                   nil)
+                   ham-split)
                   ((= status 2)
                    (message "%s: message's status is unknown." name)
-                   nil)
+                   unsure-split)
                   (t
                    (message "%s: error occurred!" name)
                    nil))))))))
