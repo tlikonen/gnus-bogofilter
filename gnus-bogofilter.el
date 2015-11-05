@@ -149,8 +149,8 @@ complex example:
                         \"unsure\"
                         \"good-mail\")
 
-This function runs `bogofilter-program' with \"-u\" argument
-which automatically trains the Bogofilter database with the
+Note that `bogofilter-program' is always executed with \"-u\"
+argument which automatically trains the filter database with the
 current message. Training occurs only if the message is detected
 as ham or spam. If Bogofilter is unsure about message's status
 the database is not trained."
