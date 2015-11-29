@@ -145,7 +145,7 @@ continue to the next split form of `nnmail-split-fancy'. More
 complex example:
 
     (: bogofilter-split '(| (from \"paypal\" \"paypal-spam\")
-                          \"other-spam\")
+                            \"other-spam\")
                         \"unsure\"
                         \"good-mail\")
 
