@@ -164,16 +164,16 @@ the database is not trained."
           (let ((name "bogofilter-split")
                 (status (bogofilter--process-buffer "-u")))
             (cond ((= status 0)
-                   (message "%s: message is spam." name)
+                   (message "%s: message is spam" name)
                    spam-split)
                   ((= status 1)
-                   (message "%s: message is ham." name)
+                   (message "%s: message is ham" name)
                    ham-split)
                   ((= status 2)
-                   (message "%s: message's status is unknown." name)
+                   (message "%s: message's status is unknown" name)
                    unsure-split)
                   (t
-                   (message "%s: error occurred!" name)
+                   (message "%s: error!" name)
                    nil))))))))
 
 
