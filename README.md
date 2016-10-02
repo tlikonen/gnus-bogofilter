@@ -44,7 +44,7 @@ better. Thus, this package.
 Copyright and License
 ---------------------
 
-Copyright (C) 2015 Teemu Likonen <<tlikonen@iki.fi>>
+Copyright (C) 2015-2016 Teemu Likonen <<tlikonen@iki.fi>>
 
 PGP: [4E10 55DC 84E9 DFF6 13D7 8557 719D 69D3 2453 9450][PGP]
 

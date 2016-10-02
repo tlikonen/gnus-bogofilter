@@ -5,7 +5,7 @@
 ;; URL: https://github.com/tlikonen/gnus-bogofilter
 ;; Keywords: Bogofilter Gnus spam mail filter
 
-;; Copyright (C) 2015 Teemu Likonen <tlikonen@iki.fi>
+;; Copyright (C) 2015-2016 Teemu Likonen <tlikonen@iki.fi>
 ;;
 ;; This program is free software: you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by the
