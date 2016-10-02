@@ -144,7 +144,7 @@ That example means that detected spam mail is delivered to group
 continue to the next split form of `nnmail-split-fancy'. More
 complex example:
 
-    (: bogofilter-split '(| (from \"paypal\" \"paypal-spam\")
+    (: bogofilter-split \\='(| (from \"paypal\" \"paypal-spam\")
                             \"other-spam\")
                         \"unsure\"
                         \"good-mail\")
