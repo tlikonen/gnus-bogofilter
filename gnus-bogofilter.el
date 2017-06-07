@@ -66,26 +66,26 @@
 
 ;;;###autoload
 (defun bogofilter-register-spam (&optional arg)
-  "Register the current article as \"spam\" with Bogofilter.
+  "Register the current article as spam with Bogofilter.
 
 Must be used in Gnus summary buffer. Without prefix argument this
 command runs the current article through \"bogofilter -s\". With
-optional prefix argument, first unregister the message as
-\"ham\", then register it as \"spam\". This runs the article
-through \"bogofilter -Ns\"."
+optional prefix argument, first unregister the message as ham,
+then register it as spam. This runs the article through
+\"bogofilter -Ns\"."
   (interactive "P")
   (bogofilter--register-engine (if arg "-Ns" "-s") "spam"))
 
 
 ;;;###autoload
 (defun bogofilter-register-ham (&optional arg)
-  "Register the current article as \"ham\" with Bogofilter.
+  "Register the current article as ham with Bogofilter.
 
 Must be used in Gnus summary buffer. Without prefix argument this
 command runs the current article through \"bogofilter -n\". With
-optional prefix argument, first unregister the message as
-\"spam\", then register it as \"ham\". This runs the article
-through \"bogofilter -Sn\"."
+optional prefix argument, first unregister the message as spam,
+then register it as ham. This runs the article through
+\"bogofilter -Sn\"."
   (interactive "P")
   (bogofilter--register-engine (if arg "-Sn" "-n") "ham"))
 
