@@ -71,7 +71,7 @@
 Must be used in Gnus summary buffer. Without prefix argument this
 command runs the current article through \"bogofilter -s\". With
 optional prefix argument, first unregister the message as
-\"ham\", then register it as \"spam\". This is runs the article
+\"ham\", then register it as \"spam\". This runs the article
 through \"bogofilter -Ns\"."
   (interactive "P")
   (bogofilter--register-engine (if arg "-Ns" "-s") "spam"))
@@ -84,7 +84,7 @@ through \"bogofilter -Ns\"."
 Must be used in Gnus summary buffer. Without prefix argument this
 command runs the current article through \"bogofilter -n\". With
 optional prefix argument, first unregister the message as
-\"spam\", then register it as \"ham\". This is runs the article
+\"spam\", then register it as \"ham\". This runs the article
 through \"bogofilter -Sn\"."
   (interactive "P")
   (bogofilter--register-engine (if arg "-Sn" "-n") "ham"))
