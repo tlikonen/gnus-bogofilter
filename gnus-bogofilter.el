@@ -1,3 +1,5 @@
+;; -*- lexical-binding: t -*-
+
 ;;; gnus-bogofilter.el --- Bogofilter features for Gnus
 
 ;; Author: Teemu Likonen <tlikonen@iki.fi>
