@@ -4,6 +4,10 @@ Gnus Bogofilter
 **[Bogofilter][] mail filter features for [Gnus][] ([Emacs's][Emacs]
 mail and news client)**
 
+*Note:* This program is not maintained. You are free to adopt it,
+maintain and develop it further.
+
+
 [Bogofilter]: http://bogofilter.sourceforge.net/
 [Gnus]: http://www.gnus.org/
 [Emacs]: https://www.gnu.org/software/emacs/
